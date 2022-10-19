@@ -23,6 +23,13 @@ Route::get('/test1', function () {
 Route::get('/test2', function () {
     return view('test');
 });
+// Example - Methods.
+Route::match(['get', 'post'], '/method', function () {
+    return '<p>Testing Methods.</p>';
+});
+
+// Redirect.
+Route::redirect('/redirect', '/test1');
 //routing requests
 Route::get('/reques', function () {
     $var=request("store");
