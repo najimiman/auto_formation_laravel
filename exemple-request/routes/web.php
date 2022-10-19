@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
+
+// Request form 
+Route::any("Request",[testcontroller::class,"index"]);
 
 
 Route::get('/personForm', function () {
