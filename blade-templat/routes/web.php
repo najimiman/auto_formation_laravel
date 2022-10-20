@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\testcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/rr', function () {
-    return view('form');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-// Request form 
-Route::any("Request",[testcontroller::class,"index"]);
-
-
-Route::get('/personForm', function () {
-    return view('index');
+Route::get('/test', function () {
+    return view('test');
 });
-
-Route::any("Person/{id}",[testcontroller::class,"findId"]);
-
-
-
