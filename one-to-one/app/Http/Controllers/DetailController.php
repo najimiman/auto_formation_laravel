@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Detail;
+use App\Models\Post;
+
 use Illuminate\Http\Request;
 
 class DetailController extends Controller
@@ -15,7 +18,13 @@ class DetailController extends Controller
     {
         //
     }
+    public function hasOne(){
 
+        $data = Post::find(1)->onepost;
+       
+    
+        return $data;
+    }
     /**
      * Show the form for creating a new resource.
      *
